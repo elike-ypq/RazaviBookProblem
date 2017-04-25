@@ -1,0 +1,19 @@
+***homework***
+
+*input source
+vin in 0 dc 0v
+
+*power
+vdd 2 0 5v
+
+*dc biasing
+vb 1 0 1v
+
+*switch circuit
+m1 2 in out out mod1 l=2u w=50u
+m2 out 1 0 0 mod1 l=2 w=100u
+
+
+.model mod1 nmos level=1 vto=0.7 gamma=0.45 phi=0.9 lambda=0.1 uo=350 tox=9e-9
+
+.end

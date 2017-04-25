@@ -1,0 +1,20 @@
+***homework***
+
+*input source
+vin in 0 dc 0v
+
+*switch
+rd 2 1 10k
+rs out 0 1k
+
+*mosfet
+m1 1 in out out mod1 l=2u w=50u
+
+*dc biasing
+vdd 2 0 5v
+
+.model mod1 nmos level=1 vto=0.7 gamma=0.45 phi=0.9 lambda=0.1 uo=350 tox=9e-9
+
+*.model mod1 nmos level=1
+*vto is about 0
+.end

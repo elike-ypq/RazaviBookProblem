@@ -1,0 +1,18 @@
+***homework***
+
+*Input source
+vin in 0 dc 0v ac 1v
+
+*switch
+rd 2 out 2k
+rs 1 0 1k
+
+*mosfet
+m1 out in 1 1 mod1 l=2u w=50u
+
+*dc biasing
+vdd 2 0 5v
+
+.model mod1 noms level=1
+
+.end

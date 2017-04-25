@@ -1,0 +1,16 @@
+*Inverting amplifier + supply + input source
+*source
+vcc 1 0 dc 10V
+vee 0 2 dc 10V
+
+*input sin(vo va freq td theta)
+vin 3 0 dc 0V ac 1mV sin(0V 1V 100MegHz 20ns 0)
+
+*circuit
+r1 3 4 1k
+r2 out 4 10k
+xampl 0 4 1 2 out lm741/ns
+
+.include lm741.mod
+.tran .1ns 100ns
+.end
