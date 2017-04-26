@@ -1,4 +1,5 @@
 ***homework***
+.include Razavi_mos.mod
 *input source
 vin in 0 dc 1v
 
@@ -9,9 +10,9 @@ rf in out 5k
 rs out 0 1k
 
 *mosfet
-m1 1 in out out mod1 l=2u w=50u
+m1 1 in out out nmosr l=2u w=50u
 
 
-.model mod1 nmos level=1 vto=0.7 gamma=0.45 phi=0.9 lambda=0.1 uo=350 tox=9e-9
+*.model mod1 nmos level=1 vto=0.7 gamma=0.45 phi=0.9 lambda=0.1 uo=350 tox=9e-9
 
 .end

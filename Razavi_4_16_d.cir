@@ -1,0 +1,26 @@
+***homework***
+.include nmos_R.lib
+.include pmos_R.lib
+
+*input source
+vin1 in1 s1 0v
+evin2 in2 s2 in1 s1 -1
+vcom s1 0 dc 2v
+evcom s2 0 s1 0 1
+*power source
+vdd 4 0 5v
+
+*switch
+m1 out1 in1 1 1 nmos_R w=50 l=0.5
+m2 out2 in2 1 1 nmos_R w=50 l=0.5
+m3 out1 3 4 4 pmos_R w=10 l=0.5
+m4 out2 3 4 4 pmos_R w=10 l=0.5
+r1 out1 3 1k
+r2 out2 3 1k
+
+*current source
+m5 1 2 0 0 nmos_R w=100 l=0.5
+vb 2 0 1v
+
+*.dc (vin1-vin2) -5 5 .1
+.end
